@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: helloworld-pod-2
+  labels:
+    app: helloworld-2
+spec:
+  containers:
+  - name: hello-container-2
+    image: hashicorp/http-echo:latest
+    args:
+    - "-text=Hello World 2"
+    ports:
+    - containerPort: 5678
